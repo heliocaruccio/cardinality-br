@@ -50,7 +50,7 @@ module BrazilianCardinality
 
     class << self
       def number_cardinal(number)
-        negative = number.negative? ? 'menos ' : ''
+        negative = number < 0 ? 'menos ' : ''
         n = number.to_i.abs
 
         expression = case n
