@@ -21,7 +21,7 @@ module BrazilianCardinality
       end
 
       def negative_wording(value, cents)
-        negative_word = ' negativo' if value.negative?
+        negative_word = ' negativo' if value < 0
         value = value.abs
         negative_word << 's' if negative_word && (value > 1 || cents > 1)
         negative_word.to_s
